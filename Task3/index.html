@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram-like UI Mockup</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app-container">
+        
+        <!--SCREEN 1: PROFILE SCREEN -->
+        <section class="phone-mockup screen-profile">
+            <!-- Status Bar -->
+            <div class="status-bar">
+                <span class="time">12:30</span>
+                <div class="status-icons">
+                    <i class="fas fa-signal"></i>
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-battery-full"></i>
+                </div>
+            </div>
+
+            <!-- Top Header -->
+            <header class="screen-header">
+                <span class="username">username_123</span>
+                <div class="header-right">
+                    <i class="fa-regular fa-square-plus"></i>
+                    <i class="fas fa-bars"></i>
+                    <span class="notification-dot"></span>
+                </div>
+            </header>
+
+            <!-- Profile Info Section -->
+            <div class="profile-info">
+                <div class="profile-avatar-container">
+                    <div class="profile-avatar main-avatar"></div>
+                    <span class="add-story-btn">+</span>
+                </div>
+                <div class="profile-stats">
+                    <div class="stat-item"><span class="stat-num">42</span><span class="stat-label">Posts</span></div>
+                    <div class="stat-item"><span class="stat-num">1.2k</span><span class="stat-label">Followers</span></div>
+                    <div class="stat-item"><span class="stat-num">380</span><span class="stat-label">Following</span></div>
+                </div>
+            </div>
+
+            <!-- Profile Bio -->
+            <div class="profile-bio">
+                <p class="bio-name">Your Name</p>
+                <p class="bio-text">Digital Creator | UI/UX Enthusiast 🎨<br>Designing interfaces & layouts.</p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="profile-actions">
+                <button class="btn btn-secondary">Edit Profile</button>
+                <button class="btn btn-secondary">Share Profile</button>
+            </div>
+
+            <!-- Stories Highlights -->
+            <div class="highlights-container">
+                <div class="highlight-item"><div class="hl-circle add-hl"><i class="fas fa-plus"></i></div><span>New</span></div>
+                <div class="highlight-item"><div class="hl-circle colored-gradient"></div><span>Travel</span></div>
+                <div class="highlight-item"><div class="hl-circle colored-gradient"></div><span>Food</span></div>
+                <div class="highlight-item"><div class="hl-circle colored-gradient"></div><span>Art</span></div>
+            </div>
+
+            <!-- Grid Tabs -->
+            <div class="tabs-navigation">
+                <div class="tab-item active"><i class="fas fa-grid-3x3"></i></div>
+                <div class="tab-item"><i class="fa-regular fa-id-card"></i></div>
+            </div>
+
+            <!-- Profile Grid Layout (CSS Grid) -->
+            <div class="content-area scrollable">
+                <div class="image-grid">
+                    <div class="grid-box gradient-1"></div>
+                    <div class="grid-box gradient-2"></div>
+                    <div class="grid-box gradient-3"></div>
+                    <div class="grid-box gradient-2"></div>
+                    <div class="grid-box gradient-3"></div>
+                    <div class="grid-box gradient-1"></div>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+    <i class="fas fa-home"></i>
+    <i class="fas fa-search"></i>
+    <i class="fa-regular fa-square-plus"></i>
+    <i class="fa-regular fa-heart"></i>
+    <div class="nav-avatar active-nav"></div>
+</nav>
+        </section>
+
+
+        <!-- SCREEN 2: HOME FEED SCREEN  -->
+        <section class="phone-mockup screen-feed">
+            <!-- Status Bar -->
+            <div class="status-bar">
+                <span class="time">12:30</span>
+                <div class="status-icons">
+                    <i class="fas fa-signal"></i>
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-battery-full"></i>
+                </div>
+            </div>
+
+            <!-- Top Header -->
+            <header class="screen-header">
+                <span class="app-logo">Instagram</span>
+                <div class="header-right">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-paper-plane"></i>
+                </div>
+            </header>
+
+            <div class="content-area scrollable">
+                <!-- Stories Bar -->
+                <div class="stories-bar">
+                    <div class="story-wrapper"><div class="story-ring active-story"><div class="avatar"></div></div><span>Your Story</span></div>
+                    <div class="story-wrapper"><div class="story-ring"><div class="avatar"></div></div><span>alex_g</span></div>
+                    <div class="story-wrapper"><div class="story-ring"><div class="avatar"></div></div><span>sam_d</span></div>
+                    <div class="story-wrapper"><div class="story-ring"><div class="avatar"></div></div><span>linda.m</span></div>
+                </div>
+
+                <!-- Feed Post -->
+                <article class="feed-post">
+                    <div class="post-header">
+                        <div class="post-user-info">
+                            <div class="mini-avatar"></div>
+                            <span class="post-username">alex_g</span>
+                        </div>
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                    
+                    <!-- Post Media (Gradient Box) -->
+                    <div class="post-media gradient-4"></div>
+
+                    <!-- Post Actions -->
+                    <div class="post-actions">
+                        <div class="left-actions">
+                            <i class="fa-regular fa-heart active-like"></i>
+                            <i class="fa-regular fa-comment"></i>
+                            <i class="fa-regular fa-paper-plane"></i>
+                        </div>
+                        <i class="fa-regular fa-bookmark"></i>
+                    </div>
+
+                    <!-- Post Captions & Comments -->
+                    <div class="post-details">
+                        <p class="likes-count"><strong>1,240 likes</strong></p>
+                        <p class="caption"><strong>alex_g</strong> Cruising through the sunset gradient vibes! 🌅 #aesthetic</p>
+                    </div>
+                </article>
+
+                <!-- Second Feed Post for scroll representation -->
+                <article class="feed-post">
+                    <div class="post-header">
+                        <div class="post-user-info">
+                            <div class="mini-avatar"></div>
+                            <span class="post-username">sam_d</span>
+                        </div>
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                    <div class="post-media gradient-2"></div>
+                </article>
+            </div>
+
+            <!-- Popover Notification Floating Badge (As seen in Screen 2) -->
+            <div class="floating-badge">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-comment"></i>
+            </div>
+
+            <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+    <i class="fas fa-home active-nav"></i>
+    <i class="fas fa-search"></i>
+    <i class="fa-regular fa-square-plus"></i>
+    <i class="fa-regular fa-heart"></i>
+    <div class="nav-avatar"></div>
+</nav>
+        </section>
+
+
+        <!--  SCREEN 3: EXPLORE/SEARCH GRID  -->
+        <section class="phone-mockup screen-explore">
+            <!-- Status Bar -->
+            <div class="status-bar">
+                <span class="time">12:30</span>
+                <div class="status-icons">
+                    <i class="fas fa-signal"></i>
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-battery-full"></i>
+                </div>
+            </div>
+
+            <!-- Search Bar Header -->
+            <header class="search-header">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <span class="placeholder">Search</span>
+                </div>
+                <i class="fas fa-qrcode scan-icon"></i>
+            </header>
+
+            <!-- Categories Tabs -->
+            <div class="explore-tabs">
+                <span class="explore-tab active">IGTV</span>
+                <span class="explore-tab"><i class="fas fa-shopping-bag"></i> Shop</span>
+                <span class="explore-tab">Travel</span>
+                <span class="explore-tab">Architecture</span>
+            </div>
+
+            <!-- Complex Explore Grid (CSS Grid with complex layout) -->
+            <div class="content-area scrollable">
+                <div class="explore-grid">
+                    <div class="explore-item gradient-1"></div>
+                    <div class="explore-item gradient-2 tall-item">
+                        <i class="fas fa-clone post-type-icon"></i>
+                    </div>
+                    <div class="explore-item gradient-3"></div>
+                    <div class="explore-item gradient-4"></div>
+                    <div class="explore-item gradient-1">
+                        <i class="fas fa-clone post-type-icon"></i>
+                    </div>
+                    <div class="explore-item gradient-3"></div>
+                    <div class="explore-item gradient-2"></div>
+                    <div class="explore-item gradient-4"></div>
+                    <div class="explore-item gradient-1"></div>
+                </div>
+            </div>
+            <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+    <i class="fas fa-home"></i>
+    <i class="fas fa-search active-nav"></i>
+    <i class="fa-regular fa-square-plus"></i>
+    <i class="fa-regular fa-heart"></i>
+    <div class="nav-avatar"></div>
+</nav>
+        </section>
+
+    </main>
+
+</body>
+</html>
