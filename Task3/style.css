@@ -1,0 +1,476 @@
+/* ================= GLOBAL RESETS & STYLES ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0eef6; /* Light purple background matching image_7f1ce0.jpg background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Gradients used to mimic the post and image shapes in image_7f1ce0.jpg */
+.gradient-1 { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%); }
+.gradient-2 { background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); }
+.gradient-3 { background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); }
+.gradient-4 { background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%); }
+
+/* ================= CONTAINER FOR ALL 3 SCREENS ================= */
+.app-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* PHONE MOCKUP BASE TEMPLATE  */
+.phone-mockup {
+    background-color: #ffffff;
+    width: 320px;
+    height: 640px;
+    border-radius: 36px;
+    border: 10px solid #000000;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Notch effect */
+.phone-mockup::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 130px;
+    height: 22px;
+    background-color: #000000;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    z-index: 10;
+}
+
+/* Status Bar */
+.status-bar {
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px 0 20px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #000;
+    z-index: 5;
+    background-color: #fff;
+}
+.status-icons {
+    display: flex;
+    gap: 5px;
+}
+
+/* Common Header Styles */
+.screen-header {
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    border-bottom: 1px solid #efefef;
+    background-color: #fff;
+}
+.header-right {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    position: relative;
+}
+.header-right i, .screen-header i {
+    font-size: 20px;
+    cursor: pointer;
+}
+.notification-dot {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 6px;
+    height: 6px;
+    background-color: #ff3b30;
+    border-radius: 50%;
+}
+
+/* Scrollable Inner Content Area */
+.content-area {
+    flex: 1;
+    overflow-y: auto;
+    background-color: #fff;
+}
+.content-area.scrollable::-webkit-scrollbar {
+    display: none; /* Hide scrollbars for flawless UI app look */
+}
+
+/* Bottom Navigation Bar */
+.bottom-nav {
+    height: 52px;
+    border-top: 1px solid #efefef;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    padding-bottom: 4px;
+}
+.bottom-nav i {
+    font-size: 20px;
+    color: #262626;
+    cursor: pointer;
+}
+.nav-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #dbdbdb;
+    border: 1px solid #262626;
+}
+
+
+/* SCREEN 1 SPECIFIC STYLES (PROFILE)  */
+.username {
+    font-weight: 700;
+    font-size: 16px;
+}
+.profile-info {
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    gap: 24px;
+}
+.profile-avatar-container {
+    position: relative;
+}
+.main-avatar {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+.add-story-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #0095f6;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid #fff;
+}
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+}
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.stat-num {
+    font-weight: 700;
+    font-size: 16px;
+}
+.stat-label {
+    font-size: 12px;
+    color: #666;
+}
+.profile-bio {
+    padding: 0 16px 12px 16px;
+    font-size: 13px;
+    line-height: 1.4;
+}
+.bio-name {
+    font-weight: 700;
+}
+.profile-actions {
+    display: flex;
+    gap: 8px;
+    padding: 0 16px 16px 16px;
+}
+.btn {
+    flex: 1;
+    border: none;
+    padding: 7px 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-secondary {
+    background-color: #efefef;
+    color: #000;
+}
+.highlights-container {
+    display: flex;
+    gap: 14px;
+    padding: 0 16px 16px 16px;
+    overflow-x: auto;
+}
+.highlight-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 11px;
+    gap: 4px;
+}
+.hl-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #efefef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.add-hl i {
+    font-size: 18px;
+    color: #262626;
+}
+.colored-gradient {
+    background: linear-gradient(135deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    padding: 3px;
+    background-clip: content-box;
+    border: 2px solid #dbdbdb;
+}
+.tabs-navigation {
+    display: flex;
+    border-top: 1px solid #efefef;
+    height: 44px;
+}
+.tab-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #8e8e8e;
+    cursor: pointer;
+}
+.tab-item.active {
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
+/* Grid Layout for Profile (CSS Grid) */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+}
+.grid-box {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+}
+
+
+/* SCREEN 2 SPECIFIC STYLES (HOME FEED)  */
+.app-logo {
+    font-family: serif;
+    font-size: 22px;
+    font-weight: bold;
+    font-style: italic;
+}
+.stories-bar {
+    display: flex;
+    gap: 12px;
+    padding: 10px 16px;
+    border-bottom: 1px solid #efefef;
+    overflow-x: auto;
+}
+.stories-bar::-webkit-scrollbar { display: none; }
+.story-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 11px;
+    gap: 4px;
+}
+.story-ring {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    padding: 2px;
+    background: #dbdbdb;
+}
+.story-ring.active-story {
+    background: linear-gradient(214deg, #ff3040, #ff9933);
+}
+.story-ring .avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: 2px solid white;
+}
+.feed-post {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+}
+.post-user-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.mini-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+}
+.post-username {
+    font-weight: 600;
+    font-size: 13px;
+}
+.post-media {
+    width: 100%;
+    aspect-ratio: 4 / 3; /* Matches the rectangular screen view ratio from the image */
+}
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 12px;
+    font-size: 20px;
+}
+.left-actions {
+    display: flex;
+    gap: 14px;
+}
+.active-like {
+    color: #ff3b30;
+}
+.post-details {
+    padding: 0 12px;
+    font-size: 13px;
+    line-height: 1.4;
+}
+/* Notification floating badge from image_7f1ce0.jpg center mockup */
+.floating-badge {
+    position: absolute;
+    bottom: 40px;
+    left: 170px;
+    background-color: #ff3b30;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    display: flex;
+    gap: 8px;
+    font-size: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 15;
+}
+
+/* SCREEN 3 SPECIFIC STYLES (EXPLORE)  */
+.search-header {
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #fff;
+}
+.search-box {
+    flex: 1;
+    background-color: #efefef;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    color: #8e8e8e;
+    font-size: 14px;
+}
+.scan-icon {
+    font-size: 20px;
+    color: #262626;
+}
+.explore-tabs {
+    display: flex;
+    gap: 8px;
+    padding: 0 16px 10px 16px;
+    overflow-x: auto;
+    border-bottom: 1px solid #efefef;
+    background-color: #fff;
+}
+.explore-tabs::-webkit-scrollbar { display: none; }
+.explore-tab {
+    white-space: nowrap;
+    border: 1px solid #dbdbdb;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.explore-tab.active {
+    background-color: #262626;
+    color: #fff;
+    border-color: #262626;
+}
+
+/* Grid Layout for Explore View (Complex CSS Grid Layout) */
+.explore-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 102px;
+    gap: 2px;
+    padding-top: 2px;
+}
+.explore-item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+/* Making specific items span bigger space just like the reference image */
+.tall-item {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+}
+.post-type-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: white;
+    font-size: 12px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+/* Active Bottom Navigation */
+
+.bottom-nav i{
+    color:#8e8e8e;
+}
+
+.bottom-nav .active-nav{
+    color:#000;
+}
+
+.nav-avatar.active-nav{
+    border:2px solid #000;
+}
