@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Winter | A Collection of Frozen Beauty</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== HEADER / NAV (checkbox hack for mobile menu, no JS) ===== -->
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="#home" class="logo"><span class="flake">&#10052;</span> WINTER</a>
+
+    <input type="checkbox" id="navToggleCheckbox" class="nav-toggle-checkbox">
+    <label for="navToggleCheckbox" class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </label>
+
+    <nav class="main-nav">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#gallery" class="nav-link">Gallery</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO / HOME ===== -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Winter Moments</h1>
+    <p class="hero-sub">A Collection of Frozen Beauty</p>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section id="gallery" class="gallery-section">
+  <div class="container">
+
+  
+    <div class="filters">
+      <input type="radio" name="filter" id="filter-all" checked>
+      <input type="radio" name="filter" id="filter-landscapes">
+      <input type="radio" name="filter" id="filter-decorations">
+      <input type="radio" name="filter" id="filter-food">
+      <input type="radio" name="filter" id="filter-family">
+
+      <label for="filter-all">All</label>
+      <label for="filter-landscapes">Landscapes</label>
+      <label for="filter-decorations">Decorations</label>
+      <label for="filter-food">Food</label>
+      <label for="filter-family">Family</label>
+    </div>
+
+    <div class="gallery-wrap">
+
+      <a href="#lb1" class="gallery-item large" data-category="landscapes">
+        <img src="pics/pic1.jpg" alt="Mountain Snow">
+        <span class="caption"><span class="cap-title">Mountain Snow</span><span class="cap-cat">Landscapes</span></span>
+      </a>
+
+      <a href="#lb2" class="gallery-item" data-category="family">
+        <img src="pics/pic2.jpg" alt="Clear Sky">
+        <span class="caption"><span class="cap-title">Clear Sky</span><span class="cap-cat">Family</span></span>
+      </a>
+
+      <a href="#lb3" class="gallery-item" data-category="food">
+        <img src="pics/pic3.jpg" alt="Winter Berries">
+        <span class="caption"><span class="cap-title">Winter Berries</span><span class="cap-cat">Food</span></span>
+      </a>
+
+      <a href="#lb4" class="gallery-item" data-category="landscapes">
+        <img src="pics/pic4.jpg" alt="Hot Cocoa">
+        <span class="caption"><span class="cap-title">Hot Cocoa</span><span class="cap-cat">Landscapes</span></span>
+      </a>
+
+      <a href="#lb5" class="gallery-item" data-category="family">
+        <img src="pics/pic5.jpg" alt="Pine & Berries">
+        <span class="caption"><span class="cap-title">Pine &amp; Berries</span><span class="cap-cat">Family</span></span>
+      </a>
+
+      <a href="#lb6" class="gallery-item" data-category="decorations">
+        <img src="pics/pic6.jpg" alt="Dark Chocolate">
+        <span class="caption"><span class="cap-title">Dark Chocolate</span><span class="cap-cat">Decorations</span></span>
+      </a>
+
+      <a href="#lb7" class="gallery-item wide" data-category="landscapes">
+        <img src="pics/pic7.jpg" alt="Frozen Lake">
+        <span class="caption"><span class="cap-title">Frozen Lake</span><span class="cap-cat">Landscapes</span></span>
+      </a>
+
+      <a href="#lb8" class="gallery-item" data-category="decorations">
+        <img src="pics/pic8.jpg" alt="Golden Hour Friends">
+        <span class="caption"><span class="cap-title">Golden Hour Friends</span><span class="cap-cat">Decorations</span></span>
+      </a>
+
+      <a href="#lb9" class="gallery-item" data-category="family">
+        <img src="pics/pic9.jpg" alt="Learning Together">
+        <span class="caption"><span class="cap-title">Learning Together</span><span class="cap-cat">Family</span></span>
+      </a>
+
+      <a href="#lb10" class="gallery-item" data-category="decorations">
+        <img src="pics/pic10.jpg" alt="Wrapped With Love">
+        <span class="caption"><span class="cap-title">Wrapped With Love</span><span class="cap-cat">Decorations</span></span>
+      </a>
+
+      <a href="#lb11" class="gallery-item" data-category="food">
+        <img src="pics/pic12.jpg" alt="Snowy Path">
+        <span class="caption"><span class="cap-title">Snowy Path</span><span class="cap-cat">Food</span></span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about" class="about-section">
+  <div class="container">
+    <h2 class="section-title">About</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Capturing the serene beauty of winter landscapes has been my passion for over a decade. Each photograph tells a story of frozen moments, quiet snowfalls, and the peaceful stillness that blankets the world during the coldest months.</p>
+        <p>From the majestic mountain peaks covered in pristine snow to intimate family moments wrapped in winter warmth, my work celebrates the unique beauty that this season brings. Through my lens, I aim to preserve the fleeting magic of winter &mdash; the way light dances on ice crystals, the cozy comfort of holiday gatherings, and the breathtaking landscapes transformed by snow.</p>
+        <p>My photography has been featured in various publications and galleries, and I continue to chase the quiet magic that only winter can offer.</p>
+      </div>
+      <div class="about-media">
+        <img src="pics/about.jpg" alt="About the photographer">
+        <div class="stats">
+          <div class="stat-box">
+            <span class="stat-num">10+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num">500+</span>
+            <span class="stat-label">Photos Captured</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <h2 class="section-title">Get in Touch</h2>
+    <p class="section-sub">Let's work together to capture your winter moments</p>
+
+    <form class="contact-form" action="mailto:hello@winterportfolio.com" method="post" enctype="text/plain">
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+      </div>
+      <button type="submit" class="send-btn">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <span>&#9993; hello@winterportfolio.com</span>
+      <span>&#9742; +1 (555) 123-4567</span>
+      <span>&#128205; Colorado, USA</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <p>&copy; 2026 Winter Portfolio &middot; Designed for learning purposes</p>
+</footer>
+
+<!-- ===== LIGHTBOX (pure CSS via :target, chained prev/next) ===== -->
+<div class="lightbox" id="lb1">
+  <a href="#gallery" class="lb-close">&times;</a>
+  <a href="#lb11" class="lb-prev">&#8249;</a><a href="#lb2" class="lb-next">&#8250;</a>
+  <div class="lb-content"><img src="pics/pic1.jpg" alt="Mountain Snow"><h3>Mountain Snow</h3><p>Landscapes</p></div>
+</div>
+<div class="lightbox" id="lb2">
+  <a href="#gallery" class="lb-close">&times;</a>
+  <a href="#lb1" class="lb-prev">&#8249;</a><a href="#lb3" class="lb-next">&#8250;</a>
+  <div class="lb-content"><img src="pics/pic2.jpg" alt="Clear Sky"><h3>Clear Sky</h3><p>Family</p></div>
+</div>
+<div class="lightbox" id="lb3">
+  <a href="#gallery" class="lb-close">&times;</a>
+  <a href="#lb2" class="lb-prev">&#8249;</a><a href="#lb4" class="lb-next">&#8250;</a>
+  <div class="lb-content"><img src="pics/pic3.jpg" alt="Winter Berries"><h3>Winter Berries</h3><p>Food</p></div>
+</div>
+<div class="lightbox" id="lb4">
+  <a href="#gallery" class="lb-close">&times;</a>
+  <a href="#lb3" class="lb-prev">&#8249;</a><a href="#lb5" class="lb-next">&#8250;</a>
+  <div class="lb-content"><img src="pics/pic4.jpg" alt="Hot Cocoa"><h3>Hot Cocoa</h3><p>Landscapes</p></div>
+</div>
+<div class="lightbox" id="lb5">
+  <a href="#gallery" class="lb-close">&times;</a>
+  <a href="#lb4" class="lb-prev">&#8249;</a><a href="#lb6" class="lb-next">&#8250;</a>
+  <div class="lb-content"><img src="pics/pic5.jpg" alt="Pine & Berries"><h3>Pine &amp; Berries</h3><p>Family</p></div>
+</div>
+<div class="lightbox" id="lb6">
+  <a href="#gallery" class="lb-close">&times;</a>
+  <a href="#lb5" class="lb-prev">&#8249;</a><a href="#lb7" class="lb-next">&#8250;</a>
+  <div class="lb-content"><img src="pics/pic6.jpg" alt="Dark Chocolate"><h3>Dark Chocolate</h3><p>Decorations</p></div>
+</div>
+<div class="lightbox" id="lb7">
+  <a href="#gallery" class="lb-close">&times;</a>
+  <a href="#lb6" class="lb-prev">&#8249;</a><a href="#lb8" class="lb-next">&#8250;</a>
+  <div class="lb-content"><img src="pics/pic7.jpg" alt="Frozen Lake"><h3>Frozen Lake</h3><p>Landscapes</p></div>
+</div>
+<div class="lightbox" id="lb8">
+  <a href="#gallery" class="lb-close">&times;</a>
+  <a href="#lb7" class="lb-prev">&#8249;</a><a href="#lb9" class="lb-next">&#8250;</a>
+  <div class="lb-content"><img src="pics/pic8.jpg" alt="Golden Hour Friends"><h3>Golden Hour Friends</h3><p>Decorations</p></div>
+</div>
+<div class="lightbox" id="lb9">
+  <a href="#gallery" class="lb-close">&times;</a>
+  <a href="#lb8" class="lb-prev">&#8249;</a><a href="#lb10" class="lb-next">&#8250;</a>
+  <div class="lb-content"><img src="pics/pic9.jpg" alt="Learning Together"><h3>Learning Together</h3><p>Family</p></div>
+</div>
+<div class="lightbox" id="lb10">
+  <a href="#gallery" class="lb-close">&times;</a>
+  <a href="#lb9" class="lb-prev">&#8249;</a><a href="#lb11" class="lb-next">&#8250;</a>
+  <div class="lb-content"><img src="pics/pic10.jpg" alt="Wrapped With Love"><h3>Wrapped With Love</h3><p>Decorations</p></div>
+</div>
+<div class="lightbox" id="lb11">
+  <a href="#gallery" class="lb-close">&times;</a>
+  <a href="#lb10" class="lb-prev">&#8249;</a><a href="#lb1" class="lb-next">&#8250;</a>
+  <div class="lb-content"><img src="pics/pic12.jpg" alt="Snowy Path"><h3>Snowy Path</h3><p>Food</p></div>
+</div>
+
+</body>
+</html>
